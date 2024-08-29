@@ -38,6 +38,8 @@ header {
 @media (max-width: 480px) {
     .gallery {
         grid-template-columns: 1fr;
+        justify-items: center; /* Center images horizontally */
+
     }
 }
 
