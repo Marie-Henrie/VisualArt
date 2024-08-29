@@ -4,19 +4,26 @@ body {
     padding: 0;
     background-color: #f0f0f0;
 }
-
 header {
+    background-image: url('pics/siiri2.jpg'); /* Replace with the path to your image */
+    background-size: cover; /* Ensure the image covers the entire header */
+    background-position: center; /* Center the image */
+    color: white; /* Ensure the text is readable */
+    text-align: center;
+    padding: 4em 0;
+}
+/*header {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 1em 0;
-}
+}*/
 
 .gallery {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Create 4 equal columns */
+    gap: 10px; /* Add some space between the items */
     padding: 1em;
-    overflow-x: auto; /* Allows horizontal scrolling if needed */
 }
 
 .gallery figure {
