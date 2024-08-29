@@ -72,7 +72,7 @@ figcaption {
 }
 
 /* Modal Styles */
-.modal, .text-modal {
+.modal {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,7 +85,7 @@ figcaption {
     z-index: 1000;
 }
 
-.modal-content, .text-modal-content {
+.modal-content {
     position: relative;
     background-color: whitesmoke;
     padding: 20px;
@@ -106,7 +106,7 @@ figcaption {
     border: 2px solid #fff;
 }
 
-.modal-content p, .text-modal-content p {
+.modal-content p {
     margin-top: 10px;
     font-size: 16px;
     color: #333;
