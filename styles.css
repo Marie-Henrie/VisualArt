@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+}
+
+.gallery figure {
+    margin: 10px;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+    flex-shrink: 0; /* Prevents shrinking of items */
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.gallery img:hover {
+    transform: scale(1.8);
+}
+
+figcaption {
+    padding: 10px;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+    display: block; /* Ensure figcaption is a block element */
+}
+
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background-color: whitesmoke; /* Make the background transparent */
+    padding: 0; /* Remove padding */
+    border-radius: 0; /* Remove border radius */
+    width: 600px; /* Adjust width to fit the image */
+    height: auto; /* Adjust height to fit the image */
+    max-width: 90%; /* Optional: maximum width */
+    max-height: 90%; /* Optional: maximum height */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content img {
+    width: 100%; /* Adjust the width to fit within the modal */
+    height: auto;
+    border: 2px solid #fff; /* Add a white 2px border around the image */
+    box-shadow: none; /* Remove the shadow */
+}
+
+
+
+
+.modal-content p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
