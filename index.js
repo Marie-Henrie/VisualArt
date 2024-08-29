@@ -19,4 +19,18 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
+    const links = document.querySelectorAll('.open-text-modal');
+    links.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const textModal = document.getElementById('textModal');
+            textModal.style.display = 'flex';
+
+            const closeBtn = textModal.querySelector('.close');
+            closeBtn.addEventListener('click', function() {
+                textModal.style.display = 'none';
+            });
+        });
+    });
 });
