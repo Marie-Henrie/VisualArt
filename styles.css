@@ -39,7 +39,6 @@ header {
     .gallery {
         grid-template-columns: 1fr;
         justify-items: center; /* Center images horizontally */
-
     }
 }
 
@@ -48,7 +47,7 @@ header {
     border: 5px solid #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 200px;
+    max-width: 200px; /* Ensure the figure is centered */
     text-align: center;
     flex-shrink: 0;
 }
