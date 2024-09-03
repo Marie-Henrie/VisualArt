@@ -16,7 +16,7 @@ h1 {
 
 .game-container {
     display: grid;
-    grid-template-columns: repeat(4, 100px);
+    grid-template-columns: repeat(4, 100px); /* Default: 4 columns */
     gap: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -56,4 +56,48 @@ h1 {
 
 #reset-button:hover {
     background-color: #036839;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1200px) {
+    .game-container {
+        grid-template-columns: repeat(3, 80px); /* Adjust for medium screens */
+    }
+
+    .card {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 800px) {
+    .game-container {
+        grid-template-columns: repeat(2, 60px); /* Adjust for smaller screens */
+    }
+
+    .card {
+        width: 60px;
+        height: 60px;
+    }
+
+    #reset-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    .game-container {
+        grid-template-columns: repeat(1, 100px); /* Stack cards in one column */
+    }
+
+    .card {
+        width: 100px;
+        height: 100px;
+    }
+
+    #reset-button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
 }
