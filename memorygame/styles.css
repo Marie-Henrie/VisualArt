@@ -72,7 +72,7 @@ h1 {
 
 @media (max-width: 800px) {
     .game-container {
-        grid-template-columns: repeat(2, 60px); /* Adjust for smaller screens */
+        grid-template-columns: repeat(3, 60px); /* Adjust for smaller screens */
     }
 
     .card {
@@ -88,7 +88,7 @@ h1 {
 
 @media (max-width: 500px) {
     .game-container {
-        grid-template-columns: repeat(1, 100px); /* Stack cards in one column */
+        grid-template-columns: repeat(3, 100px); /* Stack cards in one column */
     }
 
     .card {
