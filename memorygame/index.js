@@ -1,4 +1,4 @@
-const imageCount = 20; // Number of images you have
+const imageCount = 8; // Number of images you have
 const cardImages = [];
 
 // Generate the cardImages array based on the number of images
