@@ -39,16 +39,15 @@ document.addEventListener('DOMContentLoaded', function() {
         for (let i = 1; i <= numberOfImages; i++) {
             const filename = `image${i}.jpg`;
             const src = `images/${filename}`;
-            const caption = `Image ${i}`;
-            const { header, story } = stories[filename] || { header: 'No header available', story: 'No story available' };
+            const { header, story } = stories[filename] || { header: `Story ${i}`, story: 'No story available' };
 
             const figure = document.createElement('figure');
             const img = document.createElement('img');
             img.src = src;
-            img.alt = caption;
+            img.alt = header;
 
             const figcaption = document.createElement('figcaption');
-            figcaption.innerHTML = caption;
+            figcaption.innerHTML = `Story ${i}`; // Updated caption to reflect "Story ${i}"
 
             figure.appendChild(img);
             figure.appendChild(figcaption);

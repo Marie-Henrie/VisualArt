@@ -65,11 +65,15 @@ header {
 }
 
 figcaption {
-    padding: 10px;
-    background-color: #fff;
-    font-size: 14px;
-    color: #333;
-    display: block;
+    font-size: 16px;
+    color: #007bff; /* Blue color for the text */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-decoration: underline; /* Underline text to indicate it's a link */
+    margin-top: 8px;
+}
+
+figcaption:hover {
+    color: #0056b3; /* Darker blue on hover */
 }
 
 /* Modal Styles */
