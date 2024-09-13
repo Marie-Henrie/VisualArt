@@ -68,8 +68,18 @@ figcaption {
     padding: 10px;
     background-color: #fff;
     font-size: 14px;
-    color: #333;
     display: block;
+    color: #007bff; /* Link color */
+    font-weight: normal; /* Normal font weight */
+    text-decoration: underline; /* Underline on hover */
+    cursor: pointer;
+  
+}
+/* Hover State */
+figcaption:hover {
+    color: #0056b3; /* Darker blue when hovered */
+    text-decoration: underline; /* Underline on hover */
+    cursor: pointer;
 }
 
 /* Modal Styles */
