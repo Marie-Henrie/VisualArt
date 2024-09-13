@@ -14,11 +14,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('Fetched text:', text); // Debugging line
                 const stories = {};
                 const lines = text.trim().split('\n');
-                lines.forEach(line => {
-                    const [filename, ...storyParts] = line.split('|');
+                lines.forEach((line, index) => {
+                    const [header, ...storyParts] = line.split('|');
                     const story = storyParts.join('|').trim();
-                    if (filename.trim()) {
-                        stories[filename.trim()] = story;
+                    const filename = `image${index + 1}.jpg`;
+                    if (header.trim() && story.trim()) {
+                        stories[filename] = { header: header.trim(), story: story.trim() };
                     }
                 });
                 console.log('Parsed stories:', stories); // Debugging line
@@ -39,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const filename = `image${i}.jpg`;
             const src = `images/${filename}`;
             const caption = `Image ${i}`;
-            const story = stories[filename] || 'No story available';
+            const { header, story } = stories[filename] || { header: 'No header available', story: 'No story available' };
 
             const figure = document.createElement('figure');
             const img = document.createElement('img');
@@ -78,6 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 modal.innerHTML = `
                     <div class="modal-content">
                         <span class="close">×</span>
+                        <h2>${header}</h2>
                         <p>${story}</p>
                     </div>
                 `;
@@ -91,15 +93,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Fetch stories and create gallery
-    fetchStories('data/stories.txt')
-        .then(stories => {
-            createGallery(stories);
-        })
-        .catch(error => {
-            console.error('Error loading stories:', error);
-        });
+    // Load stories and create gallery
+    fetchStories('data/stories.txt').then(stories => {
+        createGallery(stories);
+    }).catch(error => {
+        console.error('Error loading stories:', error);
+    });
 });
+
+
+
 
 /*document.addEventListener('DOMContentLoaded', function() {
     // Number of images to display
