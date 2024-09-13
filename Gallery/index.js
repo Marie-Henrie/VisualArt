@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const modal = document.createElement('div');
                 modal.classList.add('modal');
                 modal.innerHTML = `
-                    <div class="modal-content">
+                    <div class="modal-content text-modal">
                         <span class="close">×</span>
                         <h2>${header}</h2>
                         <p>${story}</p>

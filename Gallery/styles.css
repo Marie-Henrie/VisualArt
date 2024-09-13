@@ -94,7 +94,7 @@ figcaption {
     padding: 20px;
     border: 1px solid #888;
     width: auto; /* Let the modal size adapt based on content */
-    max-width: 80%; /* Limit the modal size to 80% of the screen width */
+    max-width: 40%; /* Limit the modal size to 80% of the screen width */
     max-height: 80%; /* Limit modal height */
     overflow-y: auto; /* Scroll if content exceeds modal height */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
@@ -109,6 +109,24 @@ figcaption {
     max-height: 70vh; /* Prevent image from exceeding viewport height */
     object-fit: contain; /* Ensure the image scales well */
     border: 2px solid #fff;
+}
+/* For text modals */
+.modal-content.text-modal {
+    max-width: 50%; /* Smaller width for text modals */
+    max-height: 70vh; /* Set a reasonable height limit */
+    text-align: left; /* Align the text to the left */
+    padding: 20px; /* Padding inside the modal */
+    line-height: 1.6; /* Improve text readability */
+    font-size: 16px;
+}
+
+.modal-content.text-modal h2 {
+    text-align: center; /* Keep the header centered */
+    margin-top: 0; /* Remove extra margin at the top */
+}
+
+.modal-content.text-modal p {
+    margin-top: 15px; /* Add space between paragraphs */
 }
 
 /* Close button styling */
