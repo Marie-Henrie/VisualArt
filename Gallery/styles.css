@@ -150,7 +150,7 @@ figcaption {
 
 /* Responsive Modal */
 @media (max-width: 768px) {
-    .modal-content {
+    .modal-content.text-modal {
         max-width: 90%; /* Make modal wider on smaller screens */
         padding: 10px; /* Slightly reduce padding on small screens */
     }
