@@ -1,3 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-image: url('pics/siiri2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 4em 0;
+}
+
+/* Gallery Layout */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 1em;
+}
+
+/* Adjust gallery for smaller screens */
+@media (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        justify-items: center; /* Center images horizontally */
+    }
+}
+
+.gallery figure {
+    margin: 10px;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 250px; /* Ensure the figure is centered */
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1); /* Adjusted for a more subtle effect on smaller screens */
+}
+
+figcaption {
+    padding: 10px;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+    display: block;
+}
+
 /* Modal Styles */
 .modal {
     display: flex;
@@ -10,62 +84,59 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 1000;
+    padding: 20px; /* Add padding around modal for space */
 }
 
 .modal-content {
-    position: relative; /* Ensure child elements like .close are positioned relative to this container */
+    position: relative; /* Ensure the close button is positioned correctly */
     background-color: #fefefe;
-    margin: 5% auto; /* Adjusted to add more outer margin */
+    margin: auto; /* Center the modal horizontally */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Adjust width for larger modal */
-    max-width: 600px; /* Max width of the modal */
-    text-align: center; /* Center all text inside the modal */
+    width: auto; /* Let the modal size adapt based on content */
+    max-width: 80%; /* Limit the modal size to 80% of the screen width */
+    max-height: 80%; /* Limit modal height */
+    overflow-y: auto; /* Scroll if content exceeds modal height */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    text-align: center; /* Center the content inside */
 }
 
-.modal-content h2 {
-    text-align: center; /* Center the header */
-    margin-top: 0; /* Remove extra margin at the top */
-    padding-bottom: 10px; /* Add space below the header */
-}
-
-.modal-content p {
-    text-align: left; /* Align story text to the left */
-    padding-top: 10px; /* Add padding to separate from the header */
-    margin-top: 10px;
-    font-size: 16px;
-    color: #333;
-}
-
+/* Ensuring images scale well within the modal */
 .modal-content img {
     width: 100%;
     height: auto;
+    max-width: 100%; /* Prevent image from exceeding modal width */
+    max-height: 70vh; /* Prevent image from exceeding viewport height */
+    object-fit: contain; /* Ensure the image scales well */
     border: 2px solid #fff;
 }
 
-/* Close button */
+/* Close button styling */
 .close {
     position: absolute;
     top: 10px;
     right: 10px;
     font-size: 24px;
-    color: #333; /* Make the close button visible */
+    color: #333;
     cursor: pointer;
-    background: transparent; /* Ensure no background */
+    background: transparent;
     border: none;
     font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-    color: #000; /* Darker color on hover */
+    color: #000;
     text-decoration: none;
 }
 
 /* Responsive Modal */
 @media (max-width: 768px) {
     .modal-content {
-        width: 90%; /* Make modal a bit wider on smaller screens */
+        max-width: 90%; /* Make modal wider on smaller screens */
+        padding: 10px; /* Slightly reduce padding on small screens */
+    }
+    .modal-content img {
+        max-height: 60vh; /* Slightly smaller max height for images on small screens */
     }
 }
