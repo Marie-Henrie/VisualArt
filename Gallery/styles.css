@@ -91,23 +91,27 @@ figcaption:hover {
 }
 
 .modal-content {
-    position: relative;
-    background-color: whitesmoke;
+    background-color: #fefefe;
+    margin: 10% auto; /* 10% from the top, 10% from the bottom, centered */
     padding: 20px;
-    border-radius: 5px;
-    width: 90%;
-    max-width: 600px;
-    max-height: 100%;
-    overflow-y: auto;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less depending on screen size */
+    max-width: 600px; /* Max width of the modal */
+    text-align: center; /* Center all text inside the modal */
 }
 
-h2 {
-    margin-top: 0;
-    text-align: center; /* Center align the header */
+.modal-content h2 {
+    text-align: center; /* Center the header */
+    margin-top: 0; /* Remove extra margin at the top */
+    padding-bottom: 10px; /* Add space below the header */
+}
+
+.modal-content p {
+    text-align: left; /* Align story text to the left */
+    padding-top: 10px; /* Add padding to separate from the header */
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
 }
 .modal-content img {
     width: 100%;
@@ -115,11 +119,6 @@ h2 {
     border: 2px solid #fff;
 }
 
-.modal-content p {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #333;
-}
 
 .close {
     position: absolute;
