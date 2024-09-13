@@ -160,7 +160,7 @@ figcaption {
 }
 /* Styles for smaller screens (phones) */
 @media (max-width: 480px) {
-    .modal-content {
+    .modal-content.text-modal {
         width: 90%; /* Full width with some margin from the edges */
         max-width: none; /* Remove the max-width constraint */
         padding: 10px; /* Adjust padding for better readability on small screens */
@@ -170,4 +170,6 @@ figcaption {
         width: 100%; /* Ensure images are responsive */
         height: auto;
     }
+
+
 }
