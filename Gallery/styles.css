@@ -155,7 +155,8 @@ figcaption {
         padding: 10px; /* Slightly reduce padding on small screens */
     }
     .modal-content img {
-        max-height: 60vh; /* Slightly smaller max height for images on small screens */
+        width: 80%; /* Ensure images are responsive */
+        height: auto;
     }
 }
 /* Styles for smaller screens (phones) */
