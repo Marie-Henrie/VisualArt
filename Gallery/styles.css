@@ -155,8 +155,8 @@ figcaption {
         padding: 10px; /* Slightly reduce padding on small screens */
     }
     .modal-content img {
-        width: 80%; /* Ensure images are responsive */
-        height: auto;
+        max-height: 60vh; /* Slightly smaller max height for images on small screens */
+        width: auto; /* Maintain aspect ratio */
     }
 }
 /* Styles for smaller screens (phones) */
@@ -169,8 +169,7 @@ figcaption {
 
     .modal-content img {
         width: 100%; /* Ensure images are responsive */
-        height: auto;
+        max-height: 80vh;
     }
-
 
 }
