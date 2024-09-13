@@ -1,0 +1,11 @@
+{
+    "image1.jpg": {
+        "caption": "Image 1",
+        "story": "This is a detailed story for Image 1."
+    },
+    "image2.jpg": {
+        "caption": "Image 2",
+        "story": "This is a detailed story for Image 2."
+    }
+    
+}
